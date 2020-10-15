@@ -2,15 +2,17 @@
 <%- include('partials/header'); -%>
 <h1>Home</h1>
 
-<!-- <p> <%= StartingContent %></p> -->
-<blockqoute> <mark> "Keeping a personal journal a daily in-depth analysis and evaluation of your experiences is a high-leverage activity that increases self-awareness and enhances all the endowments and the synergy among them.” — Stephen R.Covey.</blockqoute></mar>
+<blockqoute id="qoute" class="mb-0"> <mark>" Writing in a journal each day allows you to
+     direct your focus to what you accomplished, what you’re grateful for and
+      what you’re committed to doing better tomorrow. Thus, you more deeply enjoy your journey each day." <span class="emoji">🧘🏽‍♂️</span>
+    — Hal Elrod</blockqoute></mark>
  
 <% posts.forEach(function(post){ %>
 
     <h1><%=post.title %></h1>
     <p>
         <%=post.content.substring(0,100) + "..." %>
-        <a href="/posts/<%=post.title %>">Read More</a>
+        <a href="/posts/<%=post._id%>">Read More</a>
     </p>
 <% }) %>
 
